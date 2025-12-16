@@ -26,9 +26,14 @@ class UserController extends Controller
 
 
     // home page call
-    function userhome(){
-        return view('home');
+    function home(){
+        #lec#11 
+        $name="Sikander";
+        $users=['Asad','Sikander','sultan'];
+        return view('home', ["name"=>$name , "users"=>$users]);
     } 
+        #lec#11
+
 
     function adminlogin(){
         if (View::exists('admin.login')){
@@ -39,3 +44,14 @@ class UserController extends Controller
         }
     }
 }
+
+
+    #lec#12     
+// function userabout(){
+// return view('dout');
+// 
+// }
+
+
+
+    #lec#12  

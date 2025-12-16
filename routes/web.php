@@ -46,4 +46,13 @@ Route::get('admin-login',[UserController::class,'adminlogin']);
 
 // lecture#10 view in laravel
 Route::view('/home','home');
-Route::get('user-home',[UserController::class,'userhome']);
+
+
+#lec#11 
+
+Route::get('home',[UserController::class,'home']);
+
+
+ #lec#12 :- include sub-view files in view files 
+ 
+//  Route::get('user-dout',[UserController::class,'userdout']);
