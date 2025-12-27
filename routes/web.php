@@ -91,3 +91,11 @@ use App\Http\Controllers\UserController17;
 
 Route::get('user-form17', [UserController17::class, 'showForm']);
 Route::post('user-form17', [UserController17::class, 'submitForm']);
+
+
+
+// lecture no 18
+use App\Http\Controllers\UserController18;
+
+Route::get('user-form18', [UserController18::class, 'showForm']);
+Route::post('user-form18', [UserController18::class, 'handleForm']);
