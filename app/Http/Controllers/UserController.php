@@ -43,7 +43,7 @@ class UserController extends Controller
             echo "no view fount";
         }
     }
-}
+
 
 
     #lec#12     
@@ -52,6 +52,17 @@ class UserController extends Controller
 // 
 // }
 
+#lec#13  
+
+  function home13(){
+         return view('home13');
+    }   
+
+      function about13(){
+         return view('about13');
+    }   
 
 
-    #lec#12  
+
+}
+  

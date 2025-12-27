@@ -43,5 +43,5 @@
 
 
 {{-- lec#12 :- include sub-view files in view files  --}}
-@include('common.header');
-@include('common.inner',['page'=>"this is home page "]);
+@include('common.header')
+@include('common.inner',['page'=>"this is home page "])
