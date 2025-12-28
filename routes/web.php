@@ -99,3 +99,74 @@ use App\Http\Controllers\UserController18;
 
 Route::get('user-form18', [UserController18::class, 'showForm']);
 Route::post('user-form18', [UserController18::class, 'handleForm']);
+
+//lec 19
+Route::view('/home19','home19');
+Route::view('/home19/{name}','home19');
+Route::view('/about19','about19');
+
+//lec 20
+Route::view('/home20/profile/home','home20')->name('hm');
+Route::view('/home20/profile/{name}','home20')->name('user');
+
+
+use App\Http\Controllers\home20Controller;
+Route::get('show',[home20Controller::class,'show']);
+Route::get('user',[home20Controller::class,'user']);
+
+// lecture 21
+
+
+use App\Http\Controllers\home21Controller;
+// Route::view('/boy/home21','home21');
+
+// Route::get('/boy/show',[home21Controller::class,'show']);
+// Route::get('/boy/add',[home21Controller::class,'add']);
+
+//prefix group
+
+Route::prefix('boy')->group(function(){
+Route::view('/home21','home21');
+
+
+Route::get('/show',[home21Controller::class,'show']);
+Route::get('/add',[home21Controller::class,'add']);
+});
+
+
+Route::prefix('boy/pak')->group(function(){
+Route::view('/home21','home21');
+
+
+Route::get('/show',[home21Controller::class,'show']);
+Route::get('/add',[home21Controller::class,'add']);
+});
+
+//lec22
+use App\Http\Controllers\student22Controller;
+// Route::get('/show22',[student22Controller::class,'show']);
+// Route::get('/add22',[student22Controller::class,'add']);
+// Route::get('/delect22',[student22Controller::class,'delect']);
+
+
+// group of the student22controller
+
+Route::controller(student22Controller::class)->group(function(){
+Route::get('/show22','show');
+Route::get('/add22','add');
+Route::get('/delect22','delect');
+Route::get('/about22/{name}','about');
+});
+
+// Route::get('/about22/{name}',[student22Controller::class,'about']);
+
+// lecture 
+// Route::view('/home24','home24')->middleware('check1');
+// Route::view('/about24','about24');
+
+// group of middle ware
+Route::middleware('check1')->group(function(){
+Route::view('/about24','about24');
+Route::view('/home24','home24');
+
+});

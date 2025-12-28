@@ -6,3 +6,9 @@
 <a href="/user">user from controller</a>
 <a href="name/{name}">data of name from controller</a>
 <a href="/admin">view.admin.login</a>
+
+
+{{-- lec20 --}}
+
+<a href="{{ route('hm') }}">Go to home 20</a>
+<a href="/home20/profile/Asad">Go To ASAD profile</a>
