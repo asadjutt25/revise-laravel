@@ -170,3 +170,10 @@ Route::view('/about24','about24');
 Route::view('/home24','home24');
 
 });
+
+//lecture 25 _ assiging middleware to route
+use App\Http\Middleware\age25check;
+use App\Http\Middleware\country25check;
+
+Route::view('/about25','about25')->middleware([age25check::class,country25check::class]);
+Route::view('/home25','home25')->middleware(country25check::class);
