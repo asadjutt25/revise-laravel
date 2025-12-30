@@ -181,3 +181,7 @@ Route::view('/home25','home25')->middleware(country25check::class);
 //lecture 26 _ Connect to MySQL Database
 use App\Http\Controllers\user26controller;
 Route::get('users26',[user26controller::class,'users']);
+
+//Lecture 28 eloquent model in laravel
+use App\Http\Controllers\student28controller;
+Route::get('students28',[student28controller::class,'getstudent']);

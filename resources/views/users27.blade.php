@@ -17,6 +17,7 @@
         
     @endforeach
 </table>
+</div>
 
 
 
