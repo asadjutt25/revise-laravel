@@ -177,3 +177,7 @@ use App\Http\Middleware\country25check;
 
 Route::view('/about25','about25')->middleware([age25check::class,country25check::class]);
 Route::view('/home25','home25')->middleware(country25check::class);
+
+//lecture 26 _ Connect to MySQL Database
+use App\Http\Controllers\user26controller;
+Route::get('users26',[user26controller::class,'users']);
