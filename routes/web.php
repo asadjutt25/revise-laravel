@@ -185,3 +185,8 @@ Route::get('users26',[user26controller::class,'users']);
 //Lecture 28 eloquent model in laravel
 use App\Http\Controllers\student28controller;
 Route::get('students28',[student28controller::class,'getstudent']);
+
+//Lecture 30 http clients in laravel down
+use App\Http\Controllers\student30controller;
+
+Route::get('student30',[student30controller::class,'getstudent']);
