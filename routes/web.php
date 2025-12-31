@@ -195,3 +195,8 @@ Route::get('student30',[student30controller::class,'getstudent']);
 //Lecture 31 database queries buildes in laravel down
 use App\Http\Controllers\users31controller;
 Route::get('user31',[users31controller::class,'queries']);
+
+
+//Lecture 32 eloquent model queries buildes in laravel down
+use App\Http\Controllers\user32controller;
+Route::get('user32',[user32controller::class,'queries']);
