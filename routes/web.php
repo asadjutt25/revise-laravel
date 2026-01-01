@@ -200,3 +200,24 @@ Route::get('user31',[users31controller::class,'queries']);
 //Lecture 32 eloquent model queries buildes in laravel down
 use App\Http\Controllers\user32controller;
 Route::get('user32',[user32controller::class,'queries']);
+
+//Lecture 33  
+use App\Http\Controllers\user33controller;
+//  // method is use for get
+// Route::get('user33',[user33controller::class,'get']);
+//  // method is use for post
+// Route::post('user33',[user33controller::class,'post']);
+
+//         // method is use for put
+// // Route::put('user33',[user33controller::class,'put']);
+// Route::put('user33', [user33controller::class, 'put']);
+//  // method is use for delect
+// Route::delete('user33',[user33controller::class,'delete']);
+
+Route::view('form33','user33');
+
+
+Route::get('user33', [user33controller::class, 'get']);
+Route::post('user33', [user33controller::class, 'post']);
+Route::put('user33', [user33controller::class, 'put']);
+Route::delete('user33', [user33controller::class, 'delete']);
