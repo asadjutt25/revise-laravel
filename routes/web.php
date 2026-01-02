@@ -216,8 +216,32 @@ use App\Http\Controllers\user33controller;
 
 Route::view('form33','user33');
 
-
 Route::get('user33', [user33controller::class, 'get']);
 Route::post('user33', [user33controller::class, 'post']);
 Route::put('user33', [user33controller::class, 'put']);
 Route::delete('user33', [user33controller::class, 'delete']);
+
+
+// lecture no 34 any and match route function
+
+
+
+use App\Http\Controllers\user34controller;
+
+
+// Route::get('user34', [user34controller::class, 'any']);
+// Route::post('user34', [user34controller::class, 'any']);
+// Route::put('user34', [user34controller::class, 'any']);
+// Route::delete('user34', [user34controller::class, 'any']);
+
+
+// Route::any('user34', [user34controller::class, 'any']);
+
+Route::match(['post','get'],'/user34',[user34controller::class, 'group1']);
+
+Route::match(['put','delete'],'/user34',[user34controller::class, 'group2']);
+
+
+
+
+Route::view('form34','user34');
