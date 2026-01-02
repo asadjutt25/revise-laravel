@@ -240,8 +240,10 @@ use App\Http\Controllers\user34controller;
 Route::match(['post','get'],'/user34',[user34controller::class, 'group1']);
 
 Route::match(['put','delete'],'/user34',[user34controller::class, 'group2']);
-
-
-
-
 Route::view('form34','user34');
+
+// lecture no 35 
+
+use App\Http\Controllers\user35controller;
+Route::view('form35','user35');
+Route::post('user35', [user35controller::class, 'login']);
