@@ -247,3 +247,27 @@ Route::view('form34','user34');
 use App\Http\Controllers\user35controller;
 Route::view('form35','user35');
 Route::post('user35', [user35controller::class, 'login']);
+
+
+// lecture no 36
+
+// use App\Http\Controllers\user36controller;
+// Route::post('login36',[user36controller::class,'login']);
+// Route::get('logout36',[user36controller::class,'logout']);
+// Route::view('/login36','login36');
+
+// Route::view('/profile36','profile36');
+use App\Http\Controllers\user36controller;
+
+// Show login form
+Route::view('/login36', 'login36')->name('login36');
+
+// Handle login form submission
+Route::post('/login36', [user36controller::class, 'login'])->name('login36.post');
+
+// Show profile page (using controller)
+Route::get('/profile36', [user36controller::class, 'profile'])->name('profile36');
+
+// Logout route
+Route::get('/logout36', [user36controller::class, 'logout'])->name('logout36');
+
