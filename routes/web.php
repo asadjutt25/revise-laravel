@@ -257,6 +257,8 @@ Route::post('user35', [user35controller::class, 'login']);
 // Route::view('/login36','login36');
 
 // Route::view('/profile36','profile36');
+
+
 use App\Http\Controllers\user36controller;
 
 // Show login form
@@ -270,4 +272,11 @@ Route::get('/profile36', [user36controller::class, 'profile'])->name('profile36'
 
 // Logout route
 Route::get('/logout36', [user36controller::class, 'logout'])->name('logout36');
+
+// lecture no 37
+
+use App\Http\Controllers\user37controller;
+Route::view('/user37', 'user37');
+Route::post('adduser37', [user37controller::class, 'adduser']);
+
 
