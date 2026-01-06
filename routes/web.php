@@ -280,3 +280,7 @@ Route::view('/user37', 'user37');
 Route::post('adduser37', [user37controller::class, 'adduser']);
 
 
+// lecture no 38
+Route::view('/upload38', 'upload38');
+use App\Http\Controllers\upload38controller;
+Route::post('/upload38', [upload38controller::class,'upload']);
