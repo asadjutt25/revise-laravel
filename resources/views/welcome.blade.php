@@ -24,3 +24,10 @@
 <a href="/about39">{{ __('welcome39.about')}}</a><br>
 <a href="/about39">{{ __('welcome39.home')}}</a><br>
 <a href="/about39">{{ __('welcome39.contact')}}</a><br>
+
+{{-- lecture no 40 --}}
+<h1>{{  __('welcome39.aboutname',["name"=>"asad"]) }}</h1>
+<h1>Choose your language</h1>
+<a href="/setlang/en">English</a>
+<a href="/setlang/ur">Urdu</a>
+<a href="/setlang/cn">Chines</a>

@@ -6,4 +6,5 @@ return[
     "about" => "About39",
     "home" => "Home39",
     "contact" => "Contact us 39",
+    "aboutname"=>"Hi everyone, this is :name, how are you doing",
 ];

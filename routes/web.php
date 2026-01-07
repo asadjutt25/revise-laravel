@@ -294,3 +294,36 @@ Route::get('/about39/{lang}',function($lang){
     App::setLocale($lang);
 return view('about39');
 });
+
+// lecture no 40
+
+// Route::get('setlang/{lang}',function($lang){
+//     Session::put('lang',$lang);
+// return redirect('/');
+// });
+use Illuminate\Support\Facades\Session;
+
+
+// Route::middleware('SetLang')->group(function(){
+// Route::get('SetLang/{lang}',function($lang){
+//     session()->put('lang',$lang);
+// return redirect('/');
+// });
+
+// Route::get('/about39/{lang}',function($lang){
+//     app()->setLocale($lang);
+// return view('about39');
+// });
+ 
+// });
+
+Route::middleware('setlang')->group(function () {
+    Route::get('setlang/{lang}', function ($lang) {
+        session(['lang' => $lang]);
+        return redirect('/');
+    });
+
+    Route::get('/about39', function () {
+        return view('about39');
+    });
+});
