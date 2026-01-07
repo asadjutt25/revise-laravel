@@ -284,3 +284,13 @@ Route::post('adduser37', [user37controller::class, 'adduser']);
 Route::view('/upload38', 'upload38');
 use App\Http\Controllers\upload38controller;
 Route::post('/upload38', [upload38controller::class,'upload']);
+
+
+// lecture no 39
+// Route::view('/about39','about39');
+use Illuminate\Support\Facades\App;
+
+Route::get('/about39/{lang}',function($lang){
+    App::setLocale($lang);
+return view('about39');
+});
