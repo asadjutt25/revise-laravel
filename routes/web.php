@@ -327,3 +327,30 @@ Route::middleware('setlang')->group(function () {
         return view('about39');
     });
 });
+
+
+// lecture no 41
+// Route::view('add41','add-student41');
+// use App\Http\Controllers\student41controller;
+// Route::post('add4',[student41controller::class,'add41']);
+
+
+
+// code my me
+// use App\Http\Controllers\student41controller;
+
+// Route::view('add41','add-student41');
+
+// Route::post('add4',[student41controller::class,'add41'])->name('add4');
+
+// Route::get('list42',[student41controller::class,'list42'])->name('list42');
+
+
+// code edit
+use App\Http\Controllers\student41controller;
+
+Route::view('add41', 'add-student41')->name('add41');
+
+Route::post('add4', [student41controller::class, 'add41'])->name('add4');
+
+Route::get('list42', [student41controller::class, 'list42'])->name('list42');
