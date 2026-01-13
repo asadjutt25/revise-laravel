@@ -67,4 +67,14 @@ class student41controller extends Controller
         $studentList = Student41::latest()->get();
         return view('list-student42', ['student41' => $studentList]);
     }
+
+public function delect43($id)
+{
+    Student41::destroy($id);
+
+    return redirect()->route('list42')
+        ->with('success', 'Student deleted successfully');
+}
+
+
 }

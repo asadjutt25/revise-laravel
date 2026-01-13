@@ -200,6 +200,7 @@
               <th>Phone</th>
               <th>Created</th>
               <th>Updated</th>
+              <th>Operation</th>
             </tr>
           </thead>
 
@@ -212,6 +213,7 @@
                 <td>{{ $student4->phone }}</td>
                 <td>{{ $student4->created_at }}</td>
                 <td>{{ $student4->updated_at }}</td>
+                <td><a href="{{ url('delect43/'.$student4->id) }}">Delete</a></td>
               </tr>
             @empty
               <tr>

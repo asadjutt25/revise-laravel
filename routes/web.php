@@ -354,3 +354,5 @@ Route::view('add41', 'add-student41')->name('add41');
 Route::post('add4', [student41controller::class, 'add41'])->name('add4');
 
 Route::get('list42', [student41controller::class, 'list42'])->name('list42');
+
+Route::get('delect43/{id}', [student41controller::class, 'delect43'])->name('delect43');
