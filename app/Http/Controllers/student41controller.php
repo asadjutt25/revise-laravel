@@ -81,11 +81,41 @@ public function edit44($id)
 
        $student=Student41::find($id);
        return view('edit44',['data'=>$student]);
-
-    // Student41::destroy($id);
-
-    // return redirect()->route('list42')
-    //     ->with('success', 'Student deleted successfully');
 }
+
+// lecture 44
+
+// public function update44(Request $request, $id){
+//     $student=Student41::find($id);
+//     $student->name=$request->name;
+//      $student->email=$request->email;
+//       $student->phone=$request->phone;
+//         if($student->save()){
+//             return redirect('/list42');
+//         }else{
+//             return "update operation is failed";
+//         }
+// }
+
+ public function update45(Request $request, $id)
+    {
+        $student = Student41::findOrFail($id);
+
+        $validated = $request->validate([
+            'name'  => 'required|string|max:100',
+            'email' => 'required|email|max:150',
+            'phone' => 'required|string|max:30',
+        ]);
+
+        $student->name  = $validated['name'];
+        $student->email = $validated['email'];
+        $student->phone = $validated['phone'];
+
+        if ($student->save()) {
+            return redirect()->route('list42')->with('success', 'Student updated successfully');
+        } else {
+            return back()->with('error', 'Update operation failed');
+        }
+    }
 
 }

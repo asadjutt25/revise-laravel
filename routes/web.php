@@ -360,3 +360,4 @@ Route::get('delect43/{id}', [student41controller::class, 'delect43'])->name('del
 //LECTURE44
 Route::get('edit/{id}', [student41controller::class, 'edit44'])->name('edit44');
 
+Route::put('update45/{id}', [student41controller::class, 'update45'])->name('update45');
