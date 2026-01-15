@@ -75,6 +75,17 @@ public function delect43($id)
     return redirect()->route('list42')
         ->with('success', 'Student deleted successfully');
 }
+public function edit44($id)
+{
+    // return $id;
 
+       $student=Student41::find($id);
+       return view('edit44',['data'=>$student]);
+
+    // Student41::destroy($id);
+
+    // return redirect()->route('list42')
+    //     ->with('success', 'Student deleted successfully');
+}
 
 }
